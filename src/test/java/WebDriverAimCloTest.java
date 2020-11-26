@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class WebDriverAimCloTest {
-    public static String expectedResult ="Распечатать" ;
+    public static String expectedResult ="Кардиган удлиненный, серый" ;
     private WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
@@ -25,8 +25,8 @@ public class WebDriverAimCloTest {
         goToBagButton.click();
         WebElement goToLookBagButton = driver.findElement(By.xpath("//div[@class='add-basket__footer']"));
         goToLookBagButton.click();
-        Assert.assertEquals(waitForElementLocatedBy(driver,By.xpath("//div[@class='cart-buttons__buttons-wrap']")).getText(), expectedResult);
 
+        Assert.assertEquals(waitForElementLocatedBy(driver,By.xpath("//div[@class='tovar']//a")).getText(), expectedResult);
     }
 
     @AfterMethod(alwaysRun = true)
