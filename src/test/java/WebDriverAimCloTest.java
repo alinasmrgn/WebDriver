@@ -15,7 +15,7 @@ public class WebDriverAimCloTest {
 
     @BeforeMethod(alwaysRun = true)
     public void driverSetup(){
-        System.setProperty("webdriver.chrome.driver","D:\\школа\\operadriver_win64\\operadriver_win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","D:\\WebDriver\\chromedriver.exe");
         driver = new ChromeDriver(); }
 
     @Test
